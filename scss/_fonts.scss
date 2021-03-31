@@ -1,0 +1,33 @@
+// BOOK
+@font-face {
+    font-family: "FuturaPT";
+    src: url("../fonts/FuturaPTBook.eot");
+    src: local("☺"), url("../fonts/FuturaPTBook.woff") format("woff"), url("../fonts/FuturaPTBook.ttf") format("truetype"),
+        url("../fonts/FuturaPTBook.svg") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+
+// MEDIUM
+@font-face {
+    font-family: "FuturaPT";
+    src: url("../fonts/FuturaPTMedium.eot");
+    src: local("☺"), url("../fonts/FuturaPTMedium.woff") format("woff"), url("../fonts/FuturaPTMedium.ttf") format("truetype"),
+        url("../fonts/FuturaPTMedium.svg") format("svg");
+    font-weight: 500;
+    font-style: normal;
+}
+
+// DEMI
+@font-face {
+    font-family: "FuturaPT";
+    src: url("../fonts/FuturaPTDemi.eot");
+    src: local("☺"), url("../fonts/FuturaPTDemi.woff") format("woff"), url("../fonts/FuturaPTDemi.ttf") format("truetype"),
+        url("../fonts/FuturaPTDemi.svg") format("svg");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin FuturaPT {
+    font-family: "FuturaPT";
+}

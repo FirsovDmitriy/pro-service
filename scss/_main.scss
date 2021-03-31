@@ -1,0 +1,19 @@
+body {
+  @include FuturaPT();
+  font-weight: 300;
+  font-size: $font-size-lg;
+}
+
+.title {
+  font-weight: $fw-demi;
+  font-size: 48px;
+  line-height: 32px;
+  color: $primary-color;
+}
+
+.btn {
+  @include FuturaPT();
+  font-size: $font-size-md;
+  background-color: $primary-color;
+  padding: 18px 27px;
+}
