@@ -1,0 +1,75 @@
+.credit {
+    background-color: $bg-color;
+    padding-bottom: 100px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__icon {
+        align-self: flex-start;
+        margin-right: 17px;
+    }
+
+    &__subtitle {
+        margin-bottom: 50px;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 7px;
+    }
+
+    &__btn {
+        text-align: end;
+        margin-bottom: 50px;
+    }
+}
+
+.credit-info {
+    display: flex;
+
+    &__row {
+        display: flex;
+        margin-bottom: 24px;
+    }
+
+    &__col {
+        max-width: 188px;
+
+        & + & {
+            margin-left: 32px;
+        }
+    }
+
+    &__text {
+        letter-spacing: 0.02em;
+
+        &--grey {
+            font-size: $font-size-sm;
+            letter-spacing: 0.02em;
+            color: rgba(28, 28, 28, 0.5);
+        }
+    }
+
+    &__procent {
+        font-weight: $fw-demi;
+        font-size: 32px;
+        color: $primary-color;
+    }
+}
+
+.credit-logos {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        & + & {
+            margin-left: 40px;
+        }
+    }
+}
