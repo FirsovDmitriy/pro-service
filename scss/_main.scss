@@ -2,6 +2,13 @@ body {
   @include FuturaPT();
   font-weight: 300;
   font-size: $font-size-lg;
+  color: $primary-text-color;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .title {
@@ -13,7 +20,9 @@ body {
 
 .btn {
   @include FuturaPT();
+  font-weight: $fw-book;
   font-size: $font-size-md;
   background-color: $primary-color;
   padding: 18px 27px;
+  color: $white-color;
 }
