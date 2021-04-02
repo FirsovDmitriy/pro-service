@@ -18,6 +18,20 @@ body {
   color: $primary-color;
 }
 
+.subtitle-sm,
+.subtitle-md {
+  color: $primary-color;
+  margin-top: 25px;
+}
+
+.subtitle-sm {
+  font-size: 24px;
+}
+
+.subtitle-md {
+  font-size: 32px;
+}
+
 .btn {
   @include FuturaPT();
   font-weight: $fw-book;
@@ -25,4 +39,13 @@ body {
   background-color: $primary-color;
   padding: 18px 27px;
   color: $white-color;
+
+  &:hover {
+    color: $primary-text-color;
+    background: $green-color;
+  }
+}
+
+.input {
+  padding-bottom: 8px;
 }

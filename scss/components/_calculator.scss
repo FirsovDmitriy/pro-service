@@ -1,0 +1,80 @@
+.calculator {
+    background-image: url(../../images/Pattern.svg);
+    padding-bottom: 167px;
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 70px;
+
+        &-icon {
+            margin-right: 15px;  
+        }
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+.calculator-form {
+    &__group {
+        display: flex;
+        flex-direction: column;
+
+        &-wrapper {
+            display: flex;
+        }
+    }
+
+    &__name {
+        font-size: $font-size-md;
+        margin-bottom: 25px;
+    }
+
+    &__meter {
+        font-size: 21px;
+        margin-left: 10px;
+    }
+
+    &__input {
+        font-weight: $fw-book;
+        font-size: 21px;
+        letter-spacing: 0.02em;
+        color: $primary-text-color;
+        padding-bottom: 8px;
+        border-bottom: 2px solid rgba(28, 28, 28, 0.5);
+        background: transparent;
+
+        &--sm {
+            width: 44px;
+        }
+
+        &--lg {
+            width: 303px;
+        }
+    }
+
+    &__btn {
+        font-weight: $fw-book;
+        width: 36px;
+        height: 36px;
+        font-size: $font-size-md;
+        border: 2px solid #739AC0;
+        background: none;
+
+        & + & {
+            margin-left: 8px;
+        }
+
+        &--big {
+            width: 83px;
+        }
+
+        &:hover {
+            background: $green-color;
+        }
+    }
+}

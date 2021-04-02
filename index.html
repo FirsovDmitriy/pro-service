@@ -83,9 +83,42 @@
     <main class="main">
       <section class="wrapper-outer calculator">
         <div class="wrapper-inner">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia incidunt repudiandae, ad culpa
-          doloremque quo! Aspernatur porro distinctio assumenda veritatis. Quos possimus fugit ipsam delectus
-          consequuntur quia sed quae impedit.
+          <div class="calculator__header">
+            <img src="images/icons/calculator.svg" alt="Calculator icon" class="calculator__header-icon">
+            <div class="calculator__header-wrapper">
+              <h2 class="calculator__title title">Рассчитайте</h2>
+              <p class="calculator__subtitle subtitle-sm">
+                стоимость ремонта для квартиры
+              </p>
+            </div>
+          </div>
+          <div class="calculator__row">
+            <form action="" class="calculator__form calculator-form">
+              <div class="calculator-form__group">
+                <label for="area" class="calculator-form__name">Площадь недвижимости</label>
+                <div class="calculator-form__group-wrapper">
+                  <input type="text" class="calculator-form__input calculator-form__input--sm">
+                  <span class="calculator-form__meter">м <sup>2</sup> </span>
+                </div>
+              </div>
+              <div class="calculator-form__group">
+                <label for="area" class="calculator-form__name">Количество комнат</label>
+                <div class="calculator-form__buttons">
+                  <button class="calculator-form__btn">1</button>
+                  <button class="calculator-form__btn">2</button>
+                  <button class="calculator-form__btn">3</button>
+                  <button class="calculator-form__btn">4</button>
+                  <button class="calculator-form__btn">5</button>
+                  <button class="calculator-form__btn calculator-form__btn--big">Студия</button>
+                </div>
+              </div>
+              <div class="calculator-form__group">
+                <label for="area" class="calculator-form__name">Адрес дома, дачи или коттеджа</label>
+                <input type="text" class="calculator-form__input calculator-form__input--lg">
+              </div>
+              <button class="calculator__btn btn">Рассчитать стоимость ремонта</button>
+            </form>
+          </div>
         </div>
         <!-- /.wrapper-inner -->
       </section>
