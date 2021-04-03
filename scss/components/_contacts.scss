@@ -1,0 +1,56 @@
+.contacts {
+    background-color: $bg-color;
+
+    &__header {
+        display: flex;
+        margin-bottom: 32px;
+
+        &-icon {
+            align-self: flex-start;
+            margin-right: 17px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        padding-left: 40px;
+        margin-bottom: 50px;
+    }
+
+    &__col {
+        & + & {
+            margin-left: 155px;
+        }
+    }
+
+    &__text {
+        font-size: 24px;
+        line-height: 15px;
+        letter-spacing: 0.02em;
+
+        &--sm {
+            font-size: $font-size-sm;
+            line-height: 9px;
+            color: $second-color;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__left {
+        flex-grow: 1;
+    }
+
+    &__right {
+        overflow: hidden;
+
+        &-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}
