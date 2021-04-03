@@ -1,0 +1,69 @@
+.rewiews {
+    position: relative;
+    background: #0153A2 url(../../images/rewiews/waves.png);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    color: $white-color;
+    padding-bottom: 106px;
+
+    &__header {
+        display: flex;
+        margin-bottom: 50px;
+
+        &-icon {
+            align-self: flex-start;
+            margin-right: 17px;
+        }
+    }
+
+    &__title {
+        color: $white-color;
+    }
+
+    &__subtitle {
+        color: $white-color;
+    }
+
+    &__carousel {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__clock {
+        position: absolute;
+        top: 103px;
+        right: 146px;
+    }
+
+    &__lamp {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+.carousel {
+    &__avatar {
+        width: 96px;
+        height: 90px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-bottom: 32px;
+    }
+
+    &__name-person {
+        font-size: 24px;
+        line-height: 16px;
+        margin-bottom: 12px;
+    }
+
+    &__date {
+        font-size: $font-size-sm;
+        margin-bottom: 25px;
+    }
+}
+
+.rewiews-card {
+    max-width: 544px;
+}
