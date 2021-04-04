@@ -1,5 +1,72 @@
 .footer {
+    padding-bottom: 52px;
+
     .wrapper-inner {
         padding-top: $padding-vertical-sm;
+    }
+
+    &__logo {
+        margin-right: 41px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__top-row,
+    &__bottom-row {
+        display: grid;
+        grid-template-rows: max-content;
+
+        & + & {
+            margin-top: 24px;
+        }
+    }
+
+    &__top-row {
+        grid-template-columns: max-content 580px;
+    }
+
+    &__bottom-row {
+        grid-template-columns: 200px 220px auto;
+    }
+
+    &__text-wrapper {
+        display: flex;
+    }
+
+    &__phone {
+        margin-right: 30px;
+    }
+
+    &__text {
+        font-size: $font-size-md;
+
+        &--last {
+            justify-self: end;
+        }
+    }
+}
+
+.footer-nav {
+    justify-self: end;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        & + & {
+            margin-left: 48px;
+        }
+    }
+
+    &__link {
+        font-weight: $fw-medium;
+        font-size: $font-size-md;
+        line-height: 11px;
+        letter-spacing: $main-line-height;
+        color: $primary-text-color;
     }
 }
