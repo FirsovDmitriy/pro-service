@@ -1,5 +1,16 @@
 .contacts {
+    display: grid;
+    grid-template-rows: max-content 550px;
+    grid-template-columns: 505px auto;
+    grid-template-areas:
+        "info info"
+        "map img";
+    grid-row-gap: 50px;
     background-color: $bg-color;
+
+    .wrapper-inner {
+        grid-area: info;
+    }
 
     &__header {
         display: flex;
@@ -14,7 +25,6 @@
     &__row {
         display: flex;
         padding-left: 40px;
-        margin-bottom: 50px;
     }
 
     &__col {
@@ -36,21 +46,66 @@
         }
     }
 
-    &__wrapper {
-        display: flex;
+    &__map {
+        grid-area: map;
     }
 
-    &__left {
-        flex-grow: 1;
+    &__open-map {
+        display: none;
     }
 
-    &__right {
-        overflow: hidden;
+    &__img {
+        grid-area: img;
+        background-image: url(../../images/contacts/contacts-img.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
 
-        &-img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
+@media (max-width: 1030px) {
+    .contacts {
+        grid-template-rows: 396px;
+        grid-template-columns: max-content auto;
+        grid-template-areas: "info img";
+        grid-column-gap: 60px;
+
+        .wrapper-inner {
+            padding: 60px 0 0 10px;
         }
+
+        &__row {
+            flex-direction: column;
+            padding-bottom: 65px;
+        }
+
+        &__col {
+            & + & {
+                margin-left: 0;
+                margin-top: 25px;
+            }
+        }
+
+        &__map {
+            display: none;
+        }
+
+        &__open-map {
+            display: block;
+            width: 95px;
+            font-size: $font-size-md;
+            color: $primary-text-color;
+            padding-bottom: 8px;
+            border-bottom: 2px solid;
+            margin-top: 32px;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .contacts {
+        grid-template-rows: max-content 200px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "info"
+            "img";
     }
 }

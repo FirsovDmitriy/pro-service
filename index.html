@@ -15,10 +15,14 @@
 
     <div class="wrapper-outer header">
       <div class="header__info header-info">
-        <div class="wrapper-inner">
+        <div class="wrapper-inner wrapper-inner--lg">
           <div class="header-info__wrapper">
             <div class="header-info__left">
-              <img src="images/logo.svg" alt="Logo" class="header__logo">
+              <picture>
+                <source media="(min-width: 768px)" srcset="images/logo.svg">
+                <source media="(max-width: 767px)" srcset="images/logo-320.svg">
+                <img src="images/logo.svg" alt="Logo" class="header__logo logo">
+              </picture>
               <p class="header-info__left-text">
                 8 лет истории ремонта в Саратове
               </p>
@@ -31,28 +35,34 @@
                 <div class="header-info__right-number">+7 (8452) 56-58-25</div>
                 <div class="header-info__right-email">mail@mail.ru</div>
               </div>
+              <img src="images/header/handset.svg" alt="" class="header-info__right-handset">
             </div>
           </div>
         </div>
       </div>
       <div class="header__middle">
-        <div class="wrapper-inner">
+        <div class="wrapper-inner wrapper-inner--lg">
           <div class="header__wrapper">
             <nav class="header__menu menu">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Примеры работ</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Преимущества </a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">О компании</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Контакты </a>
-                </li>
-              </ul>
+              <div class="menu__burger">
+                <span class="menu__burger-line"></span>
+              </div>
+              <div class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Примеры работ</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Преимущества </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">О компании</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Контакты </a>
+                  </li>
+                </ul>
+              </div>
             </nav>
             <button class="header__btn btn">Рассчитать стоимость ремонта</button>
           </div>
@@ -92,33 +102,31 @@
               </p>
             </div>
           </div>
-          <div class="calculator__row">
-            <form action="" class="calculator__form calculator-form">
-              <div class="calculator-form__group">
-                <label for="area" class="calculator-form__name">Площадь недвижимости</label>
-                <div class="calculator-form__group-wrapper">
-                  <input type="text" class="calculator-form__input calculator-form__input--sm">
-                  <span class="calculator-form__meter">м <sup>2</sup> </span>
-                </div>
+          <form action="" class="calculator__form calculator-form">
+            <div class="calculator-form__group">
+              <label for="area" class="calculator-form__name">Площадь недвижимости</label>
+              <div class="calculator-form__group-wrapper">
+                <input type="text" class="calculator-form__input calculator-form__input--sm">
+                <span class="calculator-form__meter">м <sup>2</sup> </span>
               </div>
-              <div class="calculator-form__group">
-                <label for="area" class="calculator-form__name">Количество комнат</label>
-                <div class="calculator-form__buttons">
-                  <button class="calculator-form__btn">1</button>
-                  <button class="calculator-form__btn">2</button>
-                  <button class="calculator-form__btn">3</button>
-                  <button class="calculator-form__btn">4</button>
-                  <button class="calculator-form__btn">5</button>
-                  <button class="calculator-form__btn calculator-form__btn--big">Студия</button>
-                </div>
+            </div>
+            <div class="calculator-form__group">
+              <label for="area" class="calculator-form__name">Количество комнат</label>
+              <div class="calculator-form__buttons">
+                <button class="calculator-form__btn">1</button>
+                <button class="calculator-form__btn">2</button>
+                <button class="calculator-form__btn">3</button>
+                <button class="calculator-form__btn">4</button>
+                <button class="calculator-form__btn">5</button>
+                <button class="calculator-form__btn calculator-form__btn--big">Студия</button>
               </div>
-              <div class="calculator-form__group">
-                <label for="area" class="calculator-form__name">Адрес дома, дачи или коттеджа</label>
-                <input type="text" class="calculator-form__input calculator-form__input--lg">
-              </div>
-              <button class="calculator__btn btn">Рассчитать стоимость ремонта</button>
-            </form>
-          </div>
+            </div>
+            <div class="calculator-form__group">
+              <label for="area" class="calculator-form__name">Адрес дома, дачи или коттеджа</label>
+              <input type="text" class="calculator-form__input calculator-form__input--lg">
+            </div>
+            <button class="calculator__btn btn">Рассчитать стоимость ремонта</button>
+          </form>
         </div>
         <!-- /.wrapper-inner -->
       </section>
@@ -204,61 +212,51 @@
       <section class="wrapper-outer credit">
         <div class="wrapper-inner">
 
-          <div class="credit__wrapper">
-
-            <div class="credit__info credit-info">
-
-              <img src="images/credit/bank-note.svg" alt="Bank note icon" class="credit__icon">
-
-              <div class="credit-info__wrapper">
+          <div class="credit__header">
+            <div class="credit__header-col">
+              <img src="images/credit/bank-note.svg" alt="Bank note icon" class="credit__header-icon">
+              <div class="credit__header-wrapper">
                 <h2 class="credit__title title">Рассрочка</h2>
                 <p class="credit__subtitle subtitle-lg">
                   или кредит на ремонт
                 </p>
-
-                <div class="credit-info__row">
-                  <div class="credit-info__col">
-                    <p class="credit-info__text">
-                      <span class="credit-info__procent">3%</span>
-                      cкидка при полной предоплате
-                    </p>
-                  </div>
-                  <div class="credit-info__col">
-                    <p class="credit-info__text">Кредит от
-                      <span class="credit-info__procent">11,24%</span>
-                      от наших партнёров
-                    </p>
-                  </div>
-                </div>
-
-                <p class="credit-info__text credit-info__text--grey">
-                  Чтобы оформить заявку на кредит, обратитесь к менеджеру
-                </p>
-
               </div>
-
             </div>
-
-            <div class="credit__col">
-
-              <button class="credit__btn btn">Рассчитать стоимость ремонта</button>
-
-              <div class="credit__logos credit-logos">
-                <div class="credit-logos__item">
-                  <img src="images/credit/pochta.png" alt="" class="credit-logos__icon">
-                </div>
-                <div class="credit-logos__item">
-                  <img src="images/credit/alfa.png" alt="" class="credit-logos__icon">
-                </div>
-                <div class="credit-logos__item">
-                  <img src="images/credit/otp.png" alt="" class="credit-logos__icon">
-                </div>
-              </div>
-
-            </div>
-
+            <button class="credit__btn credit__btn--desktop btn">Рассчитать стоимость ремонта</button>
           </div>
-
+          <div class="credit__row">
+            <div class="credit__info credit-info">
+              <div class="credit-info__wrapper">
+                <div class="credit-info__col">
+                  <p class="credit-info__text">
+                    <span class="credit-info__procent">3%</span>
+                    cкидка при полной предоплате
+                  </p>
+                </div>
+                <div class="credit-info__col">
+                  <p class="credit-info__text">Кредит от
+                    <span class="credit-info__procent">11,24%</span>
+                    от наших партнёров
+                  </p>
+                </div>
+              </div>
+              <p class="credit-info__text credit-info__text--grey">
+                Чтобы оформить заявку на кредит, обратитесь к менеджеру
+              </p>
+            </div>
+            <div class="credit__logos credit-logos">
+              <div class="credit-logos__item">
+                <img src="images/credit/pochta.png" alt="" class="credit-logos__icon">
+              </div>
+              <div class="credit-logos__item">
+                <img src="images/credit/alfa.png" alt="" class="credit-logos__icon">
+              </div>
+              <div class="credit-logos__item">
+                <img src="images/credit/otp.png" alt="" class="credit-logos__icon">
+              </div>
+            </div>
+            <button class="credit__btn credit__btn--mobile btn">Рассчитать стоимость ремонта</button>
+          </div>
         </div>
         <!-- /.wrapper-inner -->
       </section>
@@ -282,7 +280,12 @@
                 о Вашем комфорте в надежные руки. Потому что нервные
                 клетки — не стены, они не восстанавливаются.
               </p>
-              <img src="images/about/about-img.jpg" alt="" class="about-left__img">
+              <!-- <img src="images/about/about-img.jpg" alt="" class="about-left__img"> -->
+              <picture>
+                <source media="(max-width: 767px)" srcset="images/about/about-mobile.jpg">
+                <source media="(min-width: 768px)" srcset="images/about/about-img.jpg">
+                <img src="images/about/about-img.jpg" alt="" class="about-left__img">
+              </picture>
             </div>
             <div class="about__right about-right">
               <div class="about-right__title">Этапы работ</div>
@@ -324,7 +327,8 @@
                 <div class="about-right__item">
                   <img src="images/about/6.svg" alt="" class="about-right__icon">
                   <p class="about-right__text">
-                    Общестроительные
+                    Общие
+                    строительные
                     работы
                   </p>
                 </div>
@@ -352,7 +356,7 @@
               </div>
             </div>
           </div>
-          <div class="about__leaf"></div>
+          <img src="images/about/leaf.svg" alt="" class="about__leaf">
         </div>
         <!-- /.wrapper-inner -->
       </section>
@@ -425,17 +429,25 @@
               <p class="contacts__text contacts__text--sm">Приходите к ним в гости</p>
               <p class="contacts__text">г. Саратов, ул, Московская, 55</p>
             </div>
-          </div>
-        </div>
-        <div class="contacts__wrapper">
-          <div class="contacts__left">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A551e6c2b2313cc838bdf63114dfbac7b07801749d9766e885174a54bdee92546&amp;source=constructor" width="100%" height="550" frameborder="0"></iframe>
-          </div>
-          <div class="contacts__right">
-            <img src="images/contacts/contacts-img.jpg" alt="" class="contacts__right-img">
+
+            <a href="#" class="contacts__open-map">
+              Открыть карту
+            </a>
+
           </div>
         </div>
         <!-- /.wrapper-inner -->
+
+        <div class="contacts__map">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A551e6c2b2313cc838bdf63114dfbac7b07801749d9766e885174a54bdee92546&amp;source=constructor"
+            width="100%" height="550" frameborder="0"></iframe>
+        </div>
+
+        <div class="contacts__img">
+          <!-- <img src="images/contacts/contacts-img.jpg" alt="" class="contacts__right-img"> -->
+        </div>
+
       </section>
       <!-- /.wrapper-outer contacts -->
     </main>
@@ -480,12 +492,19 @@
             </div>
           </div>
         </div>
+        <!-- footer mobile -->
+        <div class="footer__mobile footer-mobile">
+          <p class="footer__text">© «Про-сервис», 2019</p>
+          <p class="footer__text">Создание сайта — nopreset</p>
+        </div>
       </div>
       <!-- /.wrapper-inner -->
     </footer>
     <!-- /.wrapper-outer footer -->
 
   </div>
+
+  <script src="scripts/main.js"></script>
 
 </body>
 

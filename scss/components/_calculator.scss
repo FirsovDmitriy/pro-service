@@ -8,18 +8,17 @@
         margin-bottom: 70px;
 
         &-icon {
-            margin-right: 17px;  
+            margin-right: 17px;
         }
-    }
-
-    &__form {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
     }
 }
 
 .calculator-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
     &__group {
         display: flex;
         flex-direction: column;
@@ -49,11 +48,11 @@
         background: transparent;
 
         &--sm {
-            width: 44px;
+            max-width: 44px;
         }
 
         &--lg {
-            width: 303px;
+            max-width: 303px;
         }
     }
 
@@ -62,7 +61,7 @@
         width: 36px;
         height: 36px;
         font-size: $font-size-md;
-        border: 2px solid #739AC0;
+        border: 2px solid #739ac0;
         background: none;
 
         & + & {
@@ -75,6 +74,72 @@
 
         &:hover {
             background: $green-color;
+        }
+    }
+}
+
+@media (max-width: 1110px) {
+
+    .calculator-form {
+        &__group {
+
+            margin-bottom: 34px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:nth-child(2) {
+                margin: 0 25px 34px 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    .calculator-form {
+        padding-left: 49px;
+        &__group {
+
+            &:nth-child(n + 3) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 610px) {
+    .calculator {
+        &__btn {
+            margin-top: 32px;
+        }
+    }
+
+    .calculator-form {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+
+        &__group {
+            margin: 0;
+
+            &:nth-child(2) {
+                margin: 0;
+            }
+
+            & + & {
+                margin-top: 25px;
+            }
+        }
+
+        &__btn {
+            width: 30px;
+            height: 30px;
+
+            &--big {
+                width: 77px;
+            }
         }
     }
 }

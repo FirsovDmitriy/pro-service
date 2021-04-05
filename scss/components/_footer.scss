@@ -11,7 +11,6 @@
 
     &__wrapper {
         display: flex;
-        justify-content: space-between;
     }
 
     &__top-row,
@@ -68,5 +67,47 @@
         line-height: 11px;
         letter-spacing: $main-line-height;
         color: $primary-text-color;
+    }
+}
+
+.footer-mobile {
+    display: none;
+}
+
+@media (max-width: 1190px) {
+    .footer {
+
+        &__top-row {
+            grid-template-rows: repeat(2, max-content);
+            grid-row-gap: 15px;
+            grid-template-areas:
+                "nav nav"
+                "text text";
+        }
+
+        &__bottom-row {
+            grid-template-columns: repeat(3, max-content);
+            grid-column-gap: 15px;
+        }
+
+        &__text-wrapper {
+            grid-area: text;
+        }
+
+        &__nav {
+            grid-area: nav;
+            justify-self: stretch;
+        }
+    }
+}
+
+@media (max-width: 836px) {
+    .footer__wrapper {
+        display: none;
+    }
+
+    .footer-mobile {
+        display: flex;
+        justify-content: space-between;
     }
 }

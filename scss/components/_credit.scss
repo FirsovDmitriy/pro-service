@@ -2,38 +2,49 @@
     background-color: $bg-color;
     padding-bottom: 100px;
 
-    &__wrapper {
+    &__header {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-    }
-
-    &__icon {
-        align-self: flex-start;
-        margin-right: 17px;
-    }
-
-    &__subtitle {
+        justify-content: space-between;
         margin-bottom: 50px;
+
+        &-col {
+            display: flex;
+        }
+
+        &-icon {
+            align-self: flex-start;
+            margin-right: 17px;
+        }
     }
 
-    &__col {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        padding-top: 7px;
+    &__title {
+        text-align: start;
     }
 
     &__btn {
-        text-align: end;
-        margin-bottom: 50px;
+        &--desktop {
+            display: block;
+        }
+
+        &--mobile {
+            display: none;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 49px;
     }
 }
 
 .credit-info {
     display: flex;
+    flex-direction: column;
 
-    &__row {
+    &__wrapper {
         display: flex;
         margin-bottom: 24px;
     }
@@ -66,10 +77,77 @@
 .credit-logos {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     &__item {
         & + & {
             margin-left: 40px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .credit {
+        &__row {
+            flex-direction: column;
+        }
+
+        &__info {
+            margin-bottom: 32px;
+        }
+    }
+
+    .credit-logos {
+        &__item {
+            & + & {
+                margin-left: 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .credit {
+        &__btn {
+            &--desktop {
+                display: none;
+            }
+            
+            &--mobile {
+                display: block;
+            }
+        }
+    }
+    .credit-info {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__col {
+            & + & {
+                margin-left: 0;
+                margin-top: 25px;
+            }
+        }
+    }
+
+    .credit-logos {
+        margin-bottom: 32px;
+
+        &__item {
+            & + & {
+                margin-left: 0;
+            }
+
+            margin-bottom: 25px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:nth-child(1) {
+                margin-right: 25px;
+            }
         }
     }
 }
