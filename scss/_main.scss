@@ -22,8 +22,6 @@ body {
   }
 }
 
-
-
 .subtitle-sm,
 .subtitle-lg {
   color: $primary-color;
@@ -66,4 +64,67 @@ body {
 
 .input {
   padding-bottom: 8px;
+}
+
+.arrow-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 375px) {
+    justify-content: center;
+  }
+
+  &__prev {
+    margin-right: 30px;
+  }
+
+  &__next {
+    margin-left: 30px;
+  }
+
+  &__svg {
+    fill: $white-color;
+    
+    &:hover {
+      fill: #55d585;
+    }
+  }
+
+  .swiper-pagination {
+    position: static;
+  }
+
+  .swiper-pagination-bullet {
+    width: 19px;
+    height: 19px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-active {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #55d585;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #55d585;
+      }
+    }
+  }
 }

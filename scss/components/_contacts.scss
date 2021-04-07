@@ -56,7 +56,7 @@
 
     &__img {
         grid-area: img;
-        background-image: url(../images/contacts/contacts-img.jpg);
+        background-image: url(../images/contacts/contacts-img.jpg); // ============================ URL
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -98,6 +98,10 @@
             border-bottom: 2px solid;
             margin-top: 32px;
         }
+
+        &__img {
+            background-image: url(../images/contacts/bg-768.png);
+        }
     }
 }
 
@@ -107,6 +111,11 @@
         grid-template-columns: 1fr;
         grid-template-areas: "info"
             "img";
+        grid-row-gap: 0;    
+        
+        &__row {
+            padding-bottom: 48px;
+        }    
 
         &__text {
             font-size: $font-size-lg;
@@ -114,6 +123,7 @@
             &--sm {
                 font-size: $font-size-sm;
             }
-        }    
+        }
+            
     }
 }

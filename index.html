@@ -49,7 +49,7 @@
                 <span class="menu__burger-line"></span>
               </div>
               <div class="menu__body">
-               <div class="menu__nav">
+                <div class="menu__nav">
                   <ul class="menu__list">
                     <li class="menu__item">
                       <a href="#" class="menu__link">Примеры работ</a>
@@ -67,7 +67,7 @@
                   <p class="menu__text">пн-пт: 9:00 −18:00</p>
                   <p class="menu__text menu__text--black">+7 (8452) 56-58-25</p>
                   <button class="menu__btn btn">Рассчитать стоимость ремонта</button>
-               </div>
+                </div>
               </div>
             </nav>
             <button class="header__btn btn">Рассчитать стоимость ремонта</button>
@@ -76,25 +76,34 @@
       </div>
       <div class="header__bottom header-bottom">
 
-       
 
-          <div class="header-bottom__wrapper">
-            <div class="header__content content">
-              <h3 class="content__title">Комфорт в надежных руках</h3>
-              <p class="content__text">
-                С 1 ноября по 1 января, оставьте заявку с сайта и получите дизайн-проект в подарок
-              </p>
-              <div class="carousel-group-arrows">
-                <img src="images/arrow-left.png" alt="" class="carousel__arrow">
-                <img src="images/arrow-right.png" alt="" class="carousel__arrow">
+
+        <div class="header-bottom__wrapper">
+          <div class="header__content content">
+            <h3 class="content__title">Комфорт в надежных руках</h3>
+            <p class="content__text">
+              С 1 ноября по 1 января, оставьте заявку с сайта и получите дизайн-проект в подарок
+            </p>
+            <div class="arrow-group">
+              <div class="arrow-group__prev">
+                <svg class="arrow-group__svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.292893 8.70705C-0.0976311 8.31653 -0.0976311 7.68336 0.292893 7.29284L6.65685 0.92888C7.04738 0.538355 7.68054 0.538355 8.07107 0.92888C8.46159 1.3194 8.46159 1.95257 8.07107 2.34309L3.41421 6.99995H21C21.5523 6.99995 22 7.44766 22 7.99995C22 8.55223 21.5523 8.99995 21 8.99995H3.41421L8.07107 13.6568C8.46159 14.0473 8.46159 14.6805 8.07107 15.071C7.68054 15.4615 7.04738 15.4615 6.65685 15.071L0.292893 8.70705Z" />
+                </svg>
+              </div>
+
+              <div class="arrow-group__next">
+                <svg class="arrow-group__svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M21.7069 7.29295C22.0974 7.68347 22.0974 8.31664 21.7069 8.70716L15.3429 15.0711C14.9524 15.4616 14.3192 15.4616 13.9287 15.0711C13.5382 14.6806 13.5382 14.0474 13.9287 13.6569L18.5855 9.00005L0.999755 9.00005C0.447471 9.00005 -0.000244736 8.55234 -0.000244784 8.00005C-0.000244833 7.44777 0.447471 7.00005 0.999755 7.00005L18.5855 7.00005L13.9287 2.3432C13.5382 1.95268 13.5382 1.31951 13.9287 0.928985C14.3192 0.53846 14.9524 0.53846 15.3429 0.928985L21.7069 7.29295Z" />
+                </svg>
               </div>
             </div>
-            <div class="header__carousel carousel">
-              <!-- Carousel -->
-            </div>
-          </div>
 
-        
+          </div>
+          <div class="header__bg"></div>
+        </div>
+
         <!-- /.wrapper-inner -->
       </div>
     </div>
@@ -104,7 +113,7 @@
       <section class="wrapper-outer calculator">
         <div class="wrapper-inner">
           <div class="calculator__header">
-            <img src="images/icons/calculator.svg" alt="Calculator icon" class="calculator__header-icon">
+            <img src="images/calculator/calculator.svg" alt="Calculator icon" class="calculator__header-icon">
             <div class="calculator__header-wrapper">
               <h2 class="calculator__title title">Рассчитайте</h2>
               <p class="calculator__subtitle subtitle-sm">
@@ -383,17 +392,17 @@
             </div>
           </div>
           <div class="rewiews__carousel swiper-container">
-           <div class="swiper-wrapper">
-             <div class="swiper-slide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
                 <div class="carousel__card rewiews-card">
                   <div class="carousel__header">
                     <div class="carousel__avatar">
                       <img src="images/rewiews/avatar-empty.jpg" alt="" class="carousel__avatar-image">
                     </div>
-                   <div>
+                    <div>
                       <p class="carousel__name-person">Премяков Владимир Александрович</p>
                       <p class="carousel__date">12.12.2018 г</p>
-                   </div>
+                    </div>
                   </div>
                   <p class="carousel__text">
                     К кому обратиться по поводу дизайн-проекта и ремонта квартиры
@@ -402,113 +411,135 @@
                     что связал себя узами договоров с этой компанией.
                   </p>
                 </div>
-             </div>
-             <div class="swiper-slide">
-              <div class="carousel__card rewiews-card">
-                <div class="carousel__header">
-                  <div class="carousel__avatar">
-                    <img src="images/rewiews/avatar.jpg" alt="" class="carousel__avatar-image">
-                  </div>
-                  <div>
-                    <p class="carousel__name-person">Романковская Анастасия Петровна</p>
-                    <p class="carousel__date">12.12.2018 г</p>
-                  </div>
-                </div>
-                <p class="carousel__text">
-                  Являясь клиентом компании, я воспользовалась услугой по проведению
-                  ремонтных работ в моем доме. В целом довольна всем: ремонт выполнен
-                  качественно за небольшой период времени, решения сотрудниками
-                  принимаются быстро, что указывает на их большой опыт работы
-                  и высокие профессиональные качества.
-                </p>
               </div>
-             </div>
-             <div class="swiper-slide">
-              <div class="carousel__card rewiews-card">
-                <div class="carousel__header">
-                  <div class="carousel__avatar">
-                    <img src="images/rewiews/avatar-empty.jpg" alt="" class="carousel__avatar-image">
+              <div class="swiper-slide">
+                <div class="carousel__card rewiews-card">
+                  <div class="carousel__header">
+                    <div class="carousel__avatar">
+                      <img src="images/rewiews/avatar.jpg" alt="" class="carousel__avatar-image">
+                    </div>
+                    <div>
+                      <p class="carousel__name-person">Романковская Анастасия Петровна</p>
+                      <p class="carousel__date">12.12.2018 г</p>
+                    </div>
                   </div>
-                  <div>
-                    <p class="carousel__name-person">Премяков Владимир Александрович</p>
-                    <p class="carousel__date">12.12.2018 г</p>
-                  </div>
+                  <p class="carousel__text">
+                    Являясь клиентом компании, я воспользовалась услугой по проведению
+                    ремонтных работ в моем доме. В целом довольна всем: ремонт выполнен
+                    качественно за небольшой период времени, решения сотрудниками
+                    принимаются быстро, что указывает на их большой опыт работы
+                    и высокие профессиональные качества.
+                  </p>
                 </div>
-                <p class="carousel__text">
-                  К кому обратиться по поводу дизайн-проекта и ремонта квартиры
-                  с «нуля» выбирал сам. Несколько встреч, анализ сайтов и читка
-                  отзывов подсказали мне, как оказалось, правильный выбор. Не жалею,
-                  что связал себя узами договоров с этой компанией.
-                </p>
               </div>
-             </div>
-             <div class="swiper-slide">
-              <div class="carousel__card rewiews-card">
-                <div class="carousel__header">
-                  <div class="carousel__avatar">
-                    <img src="images/rewiews/avatar.jpg" alt="" class="carousel__avatar-image">
+              <div class="swiper-slide">
+                <div class="carousel__card rewiews-card">
+                  <div class="carousel__header">
+                    <div class="carousel__avatar">
+                      <img src="images/rewiews/avatar-empty.jpg" alt="" class="carousel__avatar-image">
+                    </div>
+                    <div>
+                      <p class="carousel__name-person">Премяков Владимир Александрович</p>
+                      <p class="carousel__date">12.12.2018 г</p>
+                    </div>
                   </div>
-                  <div>
-                    <p class="carousel__name-person">Романковская Анастасия Петровна</p>
-                    <p class="carousel__date">12.12.2018 г</p>
-                  </div>
+                  <p class="carousel__text">
+                    К кому обратиться по поводу дизайн-проекта и ремонта квартиры
+                    с «нуля» выбирал сам. Несколько встреч, анализ сайтов и читка
+                    отзывов подсказали мне, как оказалось, правильный выбор. Не жалею,
+                    что связал себя узами договоров с этой компанией.
+                  </p>
                 </div>
-                <p class="carousel__text">
-                  Являясь клиентом компании, я воспользовалась услугой по проведению
-                  ремонтных работ в моем доме. В целом довольна всем: ремонт выполнен
-                  качественно за небольшой период времени, решения сотрудниками
-                  принимаются быстро, что указывает на их большой опыт работы
-                  и высокие профессиональные качества.
-                </p>
               </div>
-             </div>
-             <div class="swiper-slide">
-              <div class="carousel__card rewiews-card">
-                <div class="carousel__header">
-                  <div class="carousel__avatar">
-                  <img src="images/rewiews/avatar-empty.jpg" alt="" class="carousel__avatar-image">
-                </div>
-                <div>
-                  <p class="carousel__name-person">Премяков Владимир Александрович</p>
-                  <p class="carousel__date">12.12.2018 г</p>
-                </div>
-                </div>
-                <p class="carousel__text">
-                  К кому обратиться по поводу дизайн-проекта и ремонта квартиры
-                  с «нуля» выбирал сам. Несколько встреч, анализ сайтов и читка
-                  отзывов подсказали мне, как оказалось, правильный выбор. Не жалею,
-                  что связал себя узами договоров с этой компанией.
-                </p>
-              </div>
-             </div>
-             <div class="swiper-slide">
-              <div class="carousel__card rewiews-card">
-                <div class="carousel__header">
-                  <div class="carousel__avatar">
-                    <img src="images/rewiews/avatar.jpg" alt="" class="carousel__avatar-image">
+              <div class="swiper-slide">
+                <div class="carousel__card rewiews-card">
+                  <div class="carousel__header">
+                    <div class="carousel__avatar">
+                      <img src="images/rewiews/avatar.jpg" alt="" class="carousel__avatar-image">
+                    </div>
+                    <div>
+                      <p class="carousel__name-person">Романковская Анастасия Петровна</p>
+                      <p class="carousel__date">12.12.2018 г</p>
+                    </div>
                   </div>
-                  <div>
-                    <p class="carousel__name-person">Романковская Анастасия Петровна</p>
-                    <p class="carousel__date">12.12.2018 г</p>
-                  </div>
+                  <p class="carousel__text">
+                    Являясь клиентом компании, я воспользовалась услугой по проведению
+                    ремонтных работ в моем доме. В целом довольна всем: ремонт выполнен
+                    качественно за небольшой период времени, решения сотрудниками
+                    принимаются быстро, что указывает на их большой опыт работы
+                    и высокие профессиональные качества.
+                  </p>
                 </div>
-                <p class="carousel__text">
-                  Являясь клиентом компании, я воспользовалась услугой по проведению
-                  ремонтных работ в моем доме. В целом довольна всем: ремонт выполнен
-                  качественно за небольшой период времени, решения сотрудниками
-                  принимаются быстро, что указывает на их большой опыт работы
-                  и высокие профессиональные качества.
-                </p>
               </div>
-             </div>
-           </div>
+              <div class="swiper-slide">
+                <div class="carousel__card rewiews-card">
+                  <div class="carousel__header">
+                    <div class="carousel__avatar">
+                      <img src="images/rewiews/avatar-empty.jpg" alt="" class="carousel__avatar-image">
+                    </div>
+                    <div>
+                      <p class="carousel__name-person">Премяков Владимир Александрович</p>
+                      <p class="carousel__date">12.12.2018 г</p>
+                    </div>
+                  </div>
+                  <p class="carousel__text">
+                    К кому обратиться по поводу дизайн-проекта и ремонта квартиры
+                    с «нуля» выбирал сам. Несколько встреч, анализ сайтов и читка
+                    отзывов подсказали мне, как оказалось, правильный выбор. Не жалею,
+                    что связал себя узами договоров с этой компанией.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="carousel__card rewiews-card">
+                  <div class="carousel__header">
+                    <div class="carousel__avatar">
+                      <img src="images/rewiews/avatar.jpg" alt="" class="carousel__avatar-image">
+                    </div>
+                    <div>
+                      <p class="carousel__name-person">Романковская Анастасия Петровна</p>
+                      <p class="carousel__date">12.12.2018 г</p>
+                    </div>
+                  </div>
+                  <p class="carousel__text">
+                    Являясь клиентом компании, я воспользовалась услугой по проведению
+                    ремонтных работ в моем доме. В целом довольна всем: ремонт выполнен
+                    качественно за небольшой период времени, решения сотрудниками
+                    принимаются быстро, что указывает на их большой опыт работы
+                    и высокие профессиональные качества.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-          <div class="swiper-pagination"></div>
 
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
+
+            <!-- If we need navigation buttons -->
+            <!-- 
+            <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
+           -->
           </div>
+          <!-- /.swiper-container -->
+
+          <div class="arrow-group">
+            <div class="arrow-group__prev">
+              <svg class="arrow-group__svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.292893 8.70705C-0.0976311 8.31653 -0.0976311 7.68336 0.292893 7.29284L6.65685 0.92888C7.04738 0.538355 7.68054 0.538355 8.07107 0.92888C8.46159 1.3194 8.46159 1.95257 8.07107 2.34309L3.41421 6.99995H21C21.5523 6.99995 22 7.44766 22 7.99995C22 8.55223 21.5523 8.99995 21 8.99995H3.41421L8.07107 13.6568C8.46159 14.0473 8.46159 14.6805 8.07107 15.071C7.68054 15.4615 7.04738 15.4615 6.65685 15.071L0.292893 8.70705Z" />
+              </svg>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="arrow-group__next">
+              <svg class="arrow-group__svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M21.7069 7.29295C22.0974 7.68347 22.0974 8.31664 21.7069 8.70716L15.3429 15.0711C14.9524 15.4616 14.3192 15.4616 13.9287 15.0711C13.5382 14.6806 13.5382 14.0474 13.9287 13.6569L18.5855 9.00005L0.999755 9.00005C0.447471 9.00005 -0.000244736 8.55234 -0.000244784 8.00005C-0.000244833 7.44777 0.447471 7.00005 0.999755 7.00005L18.5855 7.00005L13.9287 2.3432C13.5382 1.95268 13.5382 1.31951 13.9287 0.928985C14.3192 0.53846 14.9524 0.53846 15.3429 0.928985L21.7069 7.29295Z" />
+              </svg>
+            </div>
+          </div>
+
           <img src="images/rewiews/clock.svg" alt="" class="rewiews__clock">
           <img src="images/rewiews/lamp-rewiews.svg" alt="" class="rewiews__lamp">
         </div>

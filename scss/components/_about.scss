@@ -98,8 +98,7 @@
             grid-template-rows: repeat(2, max-content);
             grid-template-columns: repeat(5, 120px);
 
-            background: url(../images/about/line-mobile-1.svg) top no-repeat,
-                url(../images/about/linemobile-2.svg) bottom no-repeat;
+            background: none;
         }
     }
 }
@@ -124,19 +123,26 @@
 
         &__text {
             max-width: 274px;
-            margin-bottom: 210px;
-        }
-
-        &__img {
-            position: absolute;
-            top: 286px;
-            left: 0;
         }
     }
     .about-right {
         &__content {
             grid-template-rows: repeat(5, max-content);
             grid-template-columns: repeat(2, 104px);
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .about-left {
+        &__text {
+            margin-bottom: 210px;
+        }
+
+        &__img {
+            position: absolute;
+            top: 260px;
+            left: 0;
         }
     }
 }

@@ -1,6 +1,6 @@
 .rewiews {
     position: relative;
-    background: #0153A2 url(../images/rewiews/waves.png);
+    background: #0153a2 url(../images/rewiews/waves.png);
     background-repeat: no-repeat;
     background-position-y: top;
     color: $white-color;
@@ -80,6 +80,7 @@
         }
 
         &__avatar {
+            display: flex;
             margin-right: 25px;
         }
 
@@ -91,8 +92,40 @@
 
 @media (max-width: 730px) {
     .rewiews {
+        .wrapper-inner {
+            padding-top: 155px;
+        }
+
         &__clock {
             display: none;
         }
+    }
+
+    .carousel {
+        &__avatar {
+            width: 82px;
+            height: 77px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .rewiews {
+        padding-bottom: 50px;
+    }
+    .carousel {
+
+        &__avatar {
+            height: 60px;
+            margin-right: 12px;
+        }
+
+        &__text {
+            font-size: $font-size-md;
+        }
+    }
+
+    .rewiews-card {
+        max-width: 270px;
     }
 }

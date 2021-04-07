@@ -8,8 +8,8 @@ burgerMenButton.addEventListener('click', () => {
 
 new Swiper('.rewiews__carousel', {
     navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next'
+        prevEl: '.arrow-group__prev',
+        nextEl: '.arrow-group__next'
     },
 
     pagination: {
