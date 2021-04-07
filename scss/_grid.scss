@@ -1,12 +1,13 @@
 .wrapper-inner {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 100px 10px 0 10px;
+    padding: $padding-vertical 10px 0 10px;
 }
 
 @media (max-width: 768px) {
     .wrapper-inner {
         max-width: 630px;
+        padding-top: 60px;
 
         &--lg {
             max-width: 710px;
@@ -18,6 +19,7 @@
 @media (max-width: 567px) {
     .wrapper-inner {
         width: 100%;
+        padding-top: 48px;
 
         &--lg {
             padding: 15px 10px 0 10px;

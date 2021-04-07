@@ -56,7 +56,7 @@
 
     &__img {
         grid-area: img;
-        background-image: url(../../images/contacts/contacts-img.jpg);
+        background-image: url(../images/contacts/contacts-img.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -107,5 +107,13 @@
         grid-template-columns: 1fr;
         grid-template-areas: "info"
             "img";
+
+        &__text {
+            font-size: $font-size-lg;
+
+            &--sm {
+                font-size: $font-size-sm;
+            }
+        }    
     }
 }
