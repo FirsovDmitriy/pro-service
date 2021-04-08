@@ -55,6 +55,7 @@ body {
   background-color: $primary-color;
   padding: 18px 27px;
   color: $white-color;
+  transition: $transition;
 
   &:hover {
     color: $primary-text-color;
@@ -90,6 +91,7 @@ body {
 
   &__svg {
     fill: $white-color;
+    transition: $transition;
     
     &:hover {
       fill: #55d585;
@@ -128,3 +130,4 @@ body {
     }
   }
 }
+

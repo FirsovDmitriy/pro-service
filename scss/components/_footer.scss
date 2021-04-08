@@ -67,6 +67,11 @@
         line-height: 11px;
         letter-spacing: $main-line-height;
         color: $primary-text-color;
+        transition: $transition;
+
+        &:hover {
+            color: $green-color;
+        }
     }
 }
 

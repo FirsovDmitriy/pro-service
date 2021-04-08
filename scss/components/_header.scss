@@ -32,6 +32,10 @@
     height: 100%;
     width: 100%;
   }
+
+  &__arrow {
+    justify-content: flex-start;
+  }
 }
 
 .header-info {
@@ -53,7 +57,7 @@
     &-text {
       display: flex;
       align-items: center;
-      width: 225px; // ?
+      width: 225px;
       font-size: $font-size-lg;
       line-height: 24px;
 
@@ -108,6 +112,11 @@
     font-weight: $fw-medium;
     font-size: $font-size-md;
     color: $primary-text-color;
+    transition: $transition;
+
+    &:hover {
+      color: $green-color;
+    }
   }
 
   &__text {
@@ -248,7 +257,7 @@
   .menu {
     &__burger {
       position: absolute;
-      z-index: 50;
+      z-index: 100;
       top: 32px;
       right: 16px;
       display: flex;
@@ -262,6 +271,7 @@
         width: 20px;
         height: 1px;
         background-color: $primary-text-color;
+        transition: $transition;
 
         &::after,
         &::before {
@@ -270,6 +280,7 @@
           width: 20px;
           height: 1px;
           background-color: $primary-text-color;
+          transition: $transition;
         }
 
         &::before {
@@ -291,11 +302,13 @@
         &::before {
           top: 0;
           transform: rotate(45deg);
+          background-color: $primary-color;
         }
 
         &::after {
           top: 0;
           transform: rotate(-45deg);
+          background-color: $primary-color;
         }
       }
     }
@@ -307,7 +320,9 @@
       top: 0;
       left: 0;
       background-color: #e5e5e5;
-      transform: translateY(-100%);
+      transform: translateY(-110%);
+      transition: $transition;
+      z-index: 50;
 
       &--active {
         transform: translateY(0);
@@ -320,7 +335,7 @@
 
     &__list {
       flex-direction: column;
-      margin-bottom: 175px;
+      margin-bottom: 165px;
     }
 
     &__item {

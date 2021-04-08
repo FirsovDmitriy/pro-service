@@ -56,7 +56,7 @@
 
     &__img {
         grid-area: img;
-        background-image: url(../images/contacts/contacts-img.jpg); // ============================ URL
+        background-image: url(../images/contacts/contacts-img.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -115,6 +115,7 @@
         
         &__row {
             padding-bottom: 48px;
+            padding-left: 0;
         }    
 
         &__text {
