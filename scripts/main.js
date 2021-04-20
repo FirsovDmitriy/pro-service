@@ -29,3 +29,10 @@ new Swiper('.rewiews__carousel', {
     }
    
 })
+
+new Swiper('.header__carousel', {
+    navigation: {
+        prevEl: '.header-prev',
+        nextEl: '.header-next'
+    }
+})
