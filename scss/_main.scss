@@ -1,20 +1,15 @@
 body {
   @include FuturaPT();
-  font-weight: 300;
+  font-weight: 400;
   font-size: $font-size-lg;
   color: $primary-text-color;
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
 .title {
   font-weight: $fw-demi;
   font-size: 48px;
-  line-height: 32px;
+  line-height: 24px;
   color: $primary-color;
 
   @media (max-width: 768px) {
@@ -48,12 +43,16 @@ body {
   }
 }
 
+.phone-number {
+  color: $primary-text-color;
+}
+
 .btn {
   @include FuturaPT();
   font-weight: $fw-book;
   font-size: $font-size-md;
   background-color: $primary-color;
-  padding: 18px 27px;
+  padding: 15px 30px;
   color: $white-color;
   transition: $transition;
 
@@ -65,6 +64,10 @@ body {
 
 .input {
   padding-bottom: 8px;
+}
+
+.label {
+  cursor: pointer;
 }
 
 .arrow-group {

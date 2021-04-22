@@ -5,14 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicons/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="images/favicons/favicon.svg" type="image/svg">
   <title>ProService</title>
+  
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/styles.min.css">
 </head>
 
 <body>
-
-  <div class="page">
 
     <div class="wrapper-outer header">
       <div class="header__info header-info">
@@ -33,7 +34,7 @@
                 работаем по будням пн-пт: 9:00 −18:00
               </p>
               <div class="header-info__right-contacts">
-                <div class="header-info__right-number">+7 (8452) 56-58-25</div>
+                <a href="+78452565825" class="header-info__right-number phone-number">+7 (8452) 56-58-25</a>
                 <div class="header-info__right-email">mail@mail.ru</div>
               </div>
               <img src="images/header/handset.svg" alt="" class="header-info__right-handset">
@@ -45,10 +46,10 @@
         <div class="wrapper-inner wrapper-inner--lg">
           <div class="header__wrapper">
             <nav class="header__menu menu">
-              <div class="menu__burger">
+              <div class="menu__burger" id="menuBurgerButton">
                 <span class="menu__burger-line"></span>
               </div>
-              <div class="menu__body">
+              <div class="menu__body" id="menuBody">
                 <div class="menu__nav">
                   <ul class="menu__list">
                     <li class="menu__item">
@@ -65,7 +66,7 @@
                     </li>
                   </ul>
                   <p class="menu__text">пн-пт: 9:00 −18:00</p>
-                  <p class="menu__text menu__text--black">+7 (8452) 56-58-25</p>
+                  <a href="+78452565825" class="menu__text menu__text--black phone-number">+7 (8452) 56-58-25</a>
                   <button class="menu__btn btn">Рассчитать стоимость ремонта</button>
                 </div>
               </div>
@@ -75,7 +76,7 @@
         </div>
       </div>
       <div class="header__bottom header-bottom">
-        <img src="images/header/bg.png" alt="" class="header__img">
+        <img src="images/header/header-img.jpg" alt="" class="header__img">
         <div class="wrapper-inner">
           <div class="header-bottom__wrapper">
 
@@ -135,6 +136,7 @@
       </div>
     </div>
     <!-- /.wrapper-outer header -->
+    
     <main class="main">
       <section class="wrapper-outer calculator">
         <div class="wrapper-inner">
@@ -151,30 +153,42 @@
             <div class="calculator-form__group">
               <label for="area" class="calculator-form__name">Площадь недвижимости</label>
               <div class="calculator-form__group-wrapper">
-                <input type="text" class="calculator-form__input calculator-form__input--sm">
+                <input type="text" class="calculator-form__input calculator-form__input--sm" id="fieldSquare">
                 <span class="calculator-form__meter">м <sup>2</sup> </span>
               </div>
             </div>
             <div class="calculator-form__group">
               <label for="area" class="calculator-form__name">Количество комнат</label>
               <div class="calculator-form__buttons">
-                <input type="checkbox" id="checkbox_1" class="calculator-form__input">
-                <label class="calculator-form__label" for="checkbox_1">1</label>
-                <input type="checkbox" id="checkbox_2" class="calculator-form__input">
-                <label class="calculator-form__label" for="checkbox_2">2</label>
-                <input type="checkbox" id="checkbox_3" class="calculator-form__input">
-                <label class="calculator-form__label" for="checkbox_3">3</label>
-                <input type="checkbox" id="checkbox_4" class="calculator-form__input">
-                <label class="calculator-form__label" for="checkbox_4">4</label>
-                <input type="checkbox" id="checkbox_5" class="calculator-form__input">
-                <label class="calculator-form__label" for="checkbox_5">5</label>
-                <input type="checkbox" id="checkbox_6" class="calculator-form__input">
-                <label class="calculator-form__label calculator-form__label--big" for="checkbox_6">Студия</label>
+                <div class="calculator-form__inputs-wrap">
+                  <input type="radio" id="radio_1" name="apartment" class="calculator-form__input">
+                  <label class="calculator-form__label label" for="radio_1">1</label>
+                </div>
+                <div class="calculator-form__inputs-wrap">
+                  <input type="radio" id="radio_2" name="apartment" class="calculator-form__input">
+                  <label class="calculator-form__label label" for="radio_2">2</label>
+                </div>
+                <div class="calculator-form__inputs-wrap">
+                  <input type="radio" id="radio_3" name="apartment" class="calculator-form__input">
+                  <label class="calculator-form__label label" for="radio_3">3</label>
+                </div>
+                <div class="calculator-form__inputs-wrap">
+                  <input type="radio" id="radio_4" name="apartment" class="calculator-form__input">
+                  <label class="calculator-form__label label" for="radio_4">4</label>
+                </div>
+                <div class="calculator-form__inputs-wrap">
+                  <input type="radio" id="radio_5" name="apartment" class="calculator-form__input">
+                  <label class="calculator-form__label label" for="radio_5">5</label>
+                </div>
+                <div class="calculator-form__inputs-wrap">
+                  <input type="radio" id="radio_6" name="apartment" class="calculator-form__input">
+                  <label class="calculator-form__label calculator-form__label--big label" for="radio_6">Студия</label>
+                </div>
               </div>
             </div>
             <div class="calculator-form__group">
               <label for="area" class="calculator-form__name calculator-form__name--last">Адрес дома, дачи или коттеджа</label>
-              <input type="text" class="calculator-form__input calculator-form__input--lg">
+              <input type="text" class="calculator-form__input calculator-form__input--lg" id="fieldAddress">
             </div>
             <button class="calculator__btn btn">Рассчитать стоимость ремонта</button>
           </form>
@@ -258,6 +272,341 @@
         </div>
         <!-- /.wrapper-inner -->
       </section>
+      <section class="wrapper-outer examples">
+        <div class="wrapper-inner">
+          <div class="examples__header">
+            <div class="examples__header-left">
+              <img src="images/examples/map.svg" alt="" class="credit__header-icon">
+              <div class="examples__header-wrapper">
+                <h2 class="examples__title title">Примеры работ</h2>
+                <p class="examples__subtitle subtitle-sm">100 квартир и домов сделано нами. 10 сейчас в ремонте</p>
+              </div>
+            </div>
+            <form class="examples__header-right header-right">
+
+              <div class="header-right__tab">
+                <input type="radio" id="radio-1" name="tab" class="examples__header-btn examples__header-btn--active">
+                <label for="radio-1" class="label">Жилые помещения</label>
+              </div>
+
+              <div class="header-right__tab">
+                <input type="radio" id="radio-2" name="tab" class="examples__header-btn">
+                <label for="radio-2" class="label">Нежилые помещения</label>
+              </div>
+
+            </form>
+          </div>
+          <div class="examples__sliders external-slider">
+            <div class="external-slider swiper-container">
+
+
+              <!-- swiper-wrapper -->
+
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="external-slider__slide">
+
+                <div class="external-slide__wrap">
+
+                  <div class="external-slider__info-apartment">
+                    <p class="external-slider__text external-slider__text--big">Квартира в п. Юбилейном</p>
+                    <p class="external-slider__text external-slider__text--md">Общая площадь</p>
+                    <p class="external-slider__text external-slider__text--thin">75 м <sup class="external-slider__two">2</sup> </p>
+                  </div>
+                  <div class="external-slider__work-done">
+                    <p class="external-slider__text external-slider__text--md">Что сделано</p>
+                    <ul class="external-slider__list-done">
+                      <li class="external-slider__item">
+                       Отделочные работы водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Монтаж электрики кондиционирования
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоснабжения водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоотведения сантехники и водоснабжения
+                      </li>
+                      <li class="external-slider__item">
+                       Системы кондиционирования
+                      </li>
+                      <li class="external-slider__item">
+                       Отделочные работы водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Монтаж электрики кондиционирования
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоснабжения водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоотведения сантехники и водоснабжения
+                      </li>
+                      <li class="external-slider__item">
+                       Системы кондиционирования.
+                      </li>
+                      <li class="external-slider__item">
+                       Монтаж электрики кондиционирования
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+  
+                <div class="internal-slider swiper-container">
+                  <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                      <div class="internal-slider__slide">
+                        <img src="images/examples/slide-1.jpg" alt="" class="internal-slider__img">
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="internal-slider__slide">
+                        <img src="images/examples/slide-1.jpg" alt="" class="internal-slider__img">
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="internal-slider__slide">
+                        <img src="images/examples/slide-1.jpg" alt="" class="internal-slider__img">
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- /.swiper-wrapper -->
+
+                  <!-- Swiper arrows -->
+                  <div class="swiper-button-prev">
+                    <div class="arrow-group__prev examples__prev">
+                      <svg class="arrow-group__svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M0.292893 8.70705C-0.0976311 8.31653 -0.0976311 7.68336 0.292893 7.29284L6.65685 0.92888C7.04738 0.538355 7.68054 0.538355 8.07107 0.92888C8.46159 1.3194 8.46159 1.95257 8.07107 2.34309L3.41421 6.99995H21C21.5523 6.99995 22 7.44766 22 7.99995C22 8.55223 21.5523 8.99995 21 8.99995H3.41421L8.07107 13.6568C8.46159 14.0473 8.46159 14.6805 8.07107 15.071C7.68054 15.4615 7.04738 15.4615 6.65685 15.071L0.292893 8.70705Z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="swiper-button-next">
+                    <div class="arrow-group__next examples__next">
+                      <svg class="arrow-group__svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.7069 7.29295C22.0974 7.68347 22.0974 8.31664 21.7069 8.70716L15.3429 15.0711C14.9524 15.4616 14.3192 15.4616 13.9287 15.0711C13.5382 14.6806 13.5382 14.0474 13.9287 13.6569L18.5855 9.00005L0.999755 9.00005C0.447471 9.00005 -0.000244736 8.55234 -0.000244784 8.00005C-0.000244833 7.44777 0.447471 7.00005 0.999755 7.00005L18.5855 7.00005L13.9287 2.3432C13.5382 1.95268 13.5382 1.31951 13.9287 0.928985C14.3192 0.53846 14.9524 0.53846 15.3429 0.928985L21.7069 7.29295Z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                </div>
+  
+              </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="external-slider__slide">
+
+                <div class="external-slide__wrap">
+
+                  <div class="external-slider__info-apartment">
+                    <p class="external-slider__text external-slider__text--big">Квартира в п. Юбилейном</p>
+                    <p class="external-slider__text external-slider__text--md">Общая площадь</p>
+                    <p class="external-slider__text external-slider__text--thin">75 м <sup>2</sup> </p>
+                  </div>
+                  <div class="external-slider__work-done">
+                    <p class="external-slider__text external-slider__text--md">Что сделано</p>
+                    <ul class="external-slider__list-done">
+                      <li class="external-slider__item">
+                       Отделочные работы водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Монтаж электрики кондиционирования
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоснабжения водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоотведения сантехники и водоснабжения
+                      </li>
+                      <li class="external-slider__item">
+                       Системы кондиционирования
+                      </li>
+                      <li class="external-slider__item">
+                       Отделочные работы водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Монтаж электрики кондиционирования
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоснабжения водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоотведения сантехники и водоснабжения
+                      </li>
+                      <li class="external-slider__item">
+                       Системы кондиционирования.
+                      </li>
+                      <li class="external-slider__item">
+                       Монтаж электрики кондиционирования
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+  
+                <div class="internal-slider">
+                  <div class="internal-slider__slide">
+                    <img src="images/examples/slide-1.jpg" alt="" class="internal-slider__img">
+                  </div>
+                </div>
+  
+              </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="external-slider__slide">
+
+                <div class="external-slide__wrap">
+
+                  <div class="external-slider__info-apartment">
+                    <p class="external-slider__text external-slider__text--big">Квартира в п. Юбилейном</p>
+                    <p class="external-slider__text external-slider__text--md">Общая площадь</p>
+                    <p class="external-slider__text external-slider__text--thin">75 м <sup>2</sup> </p>
+                  </div>
+                  <div class="external-slider__work-done">
+                    <p class="external-slider__text external-slider__text--md">Что сделано</p>
+                    <ul class="external-slider__list-done">
+                      <li class="external-slider__item">
+                       Отделочные работы водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Монтаж электрики кондиционирования
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоснабжения водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоотведения сантехники и водоснабжения
+                      </li>
+                      <li class="external-slider__item">
+                       Системы кондиционирования
+                      </li>
+                      <li class="external-slider__item">
+                       Отделочные работы водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Монтаж электрики кондиционирования
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоснабжения водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоотведения сантехники и водоснабжения
+                      </li>
+                      <li class="external-slider__item">
+                       Системы кондиционирования.
+                      </li>
+                      <li class="external-slider__item">
+                       Монтаж электрики кондиционирования
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+  
+                <div class="internal-slider">
+                  <div class="internal-slider__slide">
+                    <img src="images/examples/slide-1.jpg" alt="" class="internal-slider__img">
+                  </div>
+                </div>
+  
+              </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="external-slider__slide">
+
+                <div class="external-slide__wrap">
+
+                  <div class="external-slider__info-apartment">
+                    <p class="external-slider__text external-slider__text--big">Квартира в п. Юбилейном</p>
+                    <p class="external-slider__text external-slider__text--md">Общая площадь</p>
+                    <p class="external-slider__text external-slider__text--thin">75 м <sup>2</sup> </p>
+                  </div>
+                  <div class="external-slider__work-done">
+                    <p class="external-slider__text external-slider__text--md">Что сделано</p>
+                    <ul class="external-slider__list-done">
+                      <li class="external-slider__item">
+                       Отделочные работы водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Монтаж электрики кондиционирования
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоснабжения водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоотведения сантехники и водоснабжения
+                      </li>
+                      <li class="external-slider__item">
+                       Системы кондиционирования
+                      </li>
+                      <li class="external-slider__item">
+                       Отделочные работы водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Монтаж электрики кондиционирования
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоснабжения водоотведения сантехники
+                      </li>
+                      <li class="external-slider__item">
+                       Системы водоотведения сантехники и водоснабжения
+                      </li>
+                      <li class="external-slider__item">
+                       Системы кондиционирования.
+                      </li>
+                      <li class="external-slider__item">
+                       Монтаж электрики кондиционирования
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+  
+                <div class="internal-slider">
+                  <div class="internal-slider__slide">
+                    <img src="images/examples/slide-1.jpg" alt="" class="internal-slider__img">
+                  </div>
+                </div>
+  
+              </div>
+                </div>
+              </div>
+              <!-- /.external-slider__slide -->
+
+              <!-- /.swiper-wrapper -->
+
+              <div class="external-slider__btns">
+                <button class="external-slider__btn external-slider__btn--sm btn external-slider__prev">
+                  <div class="arrow-group__prev external-slider__arrow">
+                    <svg class="arrow-group__svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.292893 8.70705C-0.0976311 8.31653 -0.0976311 7.68336 0.292893 7.29284L6.65685 0.92888C7.04738 0.538355 7.68054 0.538355 8.07107 0.92888C8.46159 1.3194 8.46159 1.95257 8.07107 2.34309L3.41421 6.99995H21C21.5523 6.99995 22 7.44766 22 7.99995C22 8.55223 21.5523 8.99995 21 8.99995H3.41421L8.07107 13.6568C8.46159 14.0473 8.46159 14.6805 8.07107 15.071C7.68054 15.4615 7.04738 15.4615 6.65685 15.071L0.292893 8.70705Z" />
+                    </svg>
+                  </div>
+                </button>
+                <button class="external-slider__btn btn external-slider__next">
+                  <div>Следующий пример</div>
+                  <div class="arrow-group__next external-slider__arrow">
+                    <svg class="arrow-group__svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M21.7069 7.29295C22.0974 7.68347 22.0974 8.31664 21.7069 8.70716L15.3429 15.0711C14.9524 15.4616 14.3192 15.4616 13.9287 15.0711C13.5382 14.6806 13.5382 14.0474 13.9287 13.6569L18.5855 9.00005L0.999755 9.00005C0.447471 9.00005 -0.000244736 8.55234 -0.000244784 8.00005C-0.000244833 7.44777 0.447471 7.00005 0.999755 7.00005L18.5855 7.00005L13.9287 2.3432C13.5382 1.95268 13.5382 1.31951 13.9287 0.928985C14.3192 0.53846 14.9524 0.53846 15.3429 0.928985L21.7069 7.29295Z" />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+
+            </div>
+            <!-- /.external-slider swiper-container -->
+          </div>
+
+          <img src="images/examples/examples-plant.svg" alt="Plant" class="examples__img-plant">
+
+        </div>
+      </section>
       <!-- /.wrapper-outer advantage -->
       <section class="wrapper-outer credit">
         <div class="wrapper-inner">
@@ -339,6 +688,7 @@
             <div class="about__right about-right">
               <div class="about-right__title">Этапы работ</div>
               <div class="about-right__content">
+                <img src="images/about/line.svg" alt="" class="about__line">
                 <div class="about-right__item">
                   <div class="about-right__icon"> 
                     <img src="images/about/1.svg" alt="" class="about-right__img">
@@ -560,14 +910,14 @@
           </div>
           <!-- /.swiper-container -->
           <div class="arrow-group">
-            <div class="arrow-group__prev">
+            <div class="arrow-group__prev rewiews__prev">
               <svg class="arrow-group__svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M0.292893 8.70705C-0.0976311 8.31653 -0.0976311 7.68336 0.292893 7.29284L6.65685 0.92888C7.04738 0.538355 7.68054 0.538355 8.07107 0.92888C8.46159 1.3194 8.46159 1.95257 8.07107 2.34309L3.41421 6.99995H21C21.5523 6.99995 22 7.44766 22 7.99995C22 8.55223 21.5523 8.99995 21 8.99995H3.41421L8.07107 13.6568C8.46159 14.0473 8.46159 14.6805 8.07107 15.071C7.68054 15.4615 7.04738 15.4615 6.65685 15.071L0.292893 8.70705Z" />
               </svg>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="arrow-group__next">
+            <div class="arrow-group__next rewiews__next">
               <svg class="arrow-group__svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M21.7069 7.29295C22.0974 7.68347 22.0974 8.31664 21.7069 8.70716L15.3429 15.0711C14.9524 15.4616 14.3192 15.4616 13.9287 15.0711C13.5382 14.6806 13.5382 14.0474 13.9287 13.6569L18.5855 9.00005L0.999755 9.00005C0.447471 9.00005 -0.000244736 8.55234 -0.000244784 8.00005C-0.000244833 7.44777 0.447471 7.00005 0.999755 7.00005L18.5855 7.00005L13.9287 2.3432C13.5382 1.95268 13.5382 1.31951 13.9287 0.928985C14.3192 0.53846 14.9524 0.53846 15.3429 0.928985L21.7069 7.29295Z" />
@@ -592,7 +942,7 @@
           <div class="contacts__row">
             <div class="contacts__col">
               <p class="contacts__text contacts__text--sm">Позвоните нам</p>
-              <p class="contacts__text">+7 (8452) 56-58-25</p>
+              <a href="+78452565825" class="contacts__text phone-number">+7 (8452) 56-58-25</a>
             </div>
             <div class="contacts__col">
               <p class="contacts__text contacts__text--sm">Напишите нам</p>
@@ -614,7 +964,7 @@
         <div class="contacts__map">
           <iframe
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A551e6c2b2313cc838bdf63114dfbac7b07801749d9766e885174a54bdee92546&amp;source=constructor"
-            width="100%" height="550" frameborder="0"></iframe>
+            width="100%" height="100%" frameborder="0"></iframe>
         </div>
 
         <div class="contacts__block-img">
@@ -624,6 +974,7 @@
       </section>
       <!-- /.wrapper-outer contacts -->
     </main>
+
     <footer class="wrapper-outer footer">
       <div class="wrapper-inner">
         <div class="footer__wrapper">
@@ -634,7 +985,7 @@
             <div class="footer__top-row">
               <div class="footer__text-wrapper">
                 <div class="footer__phone">
-                  <p class="footer__text">+7 (8452) 56-58-25</p>
+                  <a href="+78452565825" class="footer__text phone-number">+7 (8452) 56-58-25</a>
                 </div>
                 <div class="footer__email">
                   <p class="footer__text">mail@mail.ru</p>
@@ -673,7 +1024,6 @@
       <!-- /.wrapper-inner -->
     </footer>
     <!-- /.wrapper-outer footer -->
-  </div>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="scripts/main.js"></script>

@@ -1,7 +1,7 @@
 .calculator {
     position: relative;
     background: url(../../images/pattern.svg);
-    padding-bottom: 167px;
+    padding-bottom: 107px;
 
     &__header {
         display: flex;
@@ -100,7 +100,7 @@
             }
     }
 
-    input:not(:disabled):checked+label {
+    input:checked+label {
         background-color: $green-color;
     }
 }

@@ -1,15 +1,15 @@
-const burgerMenButton = document.querySelector('.menu__burger')
-const menuBody = document.querySelector('.menu__body')
+const burgerMenuButton = document.querySelector('#menuBurgerButton')
+const menuBody = document.querySelector('#menuBody')
 
-burgerMenButton.addEventListener('click', () => {
-    burgerMenButton.classList.toggle('menu__burger--active')
+burgerMenuButton.addEventListener('click', () => {
+    burgerMenuButton.classList.toggle('menu__burger--active')
     menuBody.classList.toggle('menu__body--active')
 })
 
 new Swiper('.rewiews__carousel', {
     navigation: {
-        prevEl: '.arrow-group__prev',
-        nextEl: '.arrow-group__next'
+        prevEl: '.rewiews__prev',
+        nextEl: '.rewiews__next'
     },
 
     pagination: {
@@ -35,4 +35,21 @@ new Swiper('.header__carousel', {
         prevEl: '.header-prev',
         nextEl: '.header-next'
     }
+})
+
+new Swiper('.external-slider', {
+    navigation: {
+        prevEl: '.external-slider__prev',
+        nextEl: '.external-slider__next'
+    }
+})
+
+new Swiper('.internal-slider', {
+    navigation: {
+        prevEl: '.examples__prev',
+        nextEl: '.examples__next'
+    },
+
+    spaceBetween: 30,
+    nested: true
 })
