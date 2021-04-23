@@ -13,7 +13,7 @@ new Swiper('.rewiews__carousel', {
     },
 
     pagination: {
-        el: '.swiper-pagination'
+        el: '.rewiews__pagination'
     },
 
     // slidesPerView: 2,
