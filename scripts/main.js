@@ -37,12 +37,30 @@ new Swiper('.header__carousel', {
     }
 })
 
-new Swiper('.external-slider', {
+
+
+ new Swiper('.external-slider', {
     navigation: {
         prevEl: '.external-slider__prev',
         nextEl: '.external-slider__next'
-    }
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' +
+                    ' из ' +
+                    '<span class="' + totalClass + '"></span>';
+        }
+      },
+
+      
+
+    spaceBetween: 30
 })
+
 
 new Swiper('.internal-slider', {
     navigation: {

@@ -2,7 +2,7 @@
     padding-bottom: 40px;
 
     .wrapper-inner {
-        padding-top: $padding-vertical-sm;
+        padding-top: 30px;
     }
 
     &__logo {
@@ -11,6 +11,8 @@
 
     &__wrapper {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__top-row,
@@ -106,7 +108,7 @@
     }
 }
 
-@media (max-width: 836px) {
+@media (max-width: 888px) {
     .footer__wrapper {
         display: none;
     }

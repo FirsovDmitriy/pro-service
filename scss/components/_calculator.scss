@@ -162,6 +162,16 @@
             }
         }
 
+        &__label {
+            width: 30px;
+            height: 30px;
+
+
+            &--big {
+                width: 77px;
+            }
+        }
+
         &__btn {
             width: 30px;
             height: 30px;

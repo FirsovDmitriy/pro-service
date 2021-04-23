@@ -41,6 +41,10 @@ body {
   @media (max-width: 768px) {
     font-size: 24px;
   }
+
+  @media (max-width: 576px) {
+    font-size: $font-size-lg;
+  }
 }
 
 .phone-number {
