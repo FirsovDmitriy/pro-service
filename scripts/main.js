@@ -69,5 +69,6 @@ new Swiper('.internal-slider', {
     },
 
     spaceBetween: 30,
-    nested: true
+    nested: true,
+    allowTouchMove: false
 })

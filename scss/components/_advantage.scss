@@ -44,6 +44,12 @@
             grid-row-gap: 28px;
             padding-left: 40px;
         }
+
+        &__col {
+            &-text {
+                font-size: $font-size-lg;
+            }
+        }
     }
 }
 
