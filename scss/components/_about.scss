@@ -102,6 +102,11 @@
     }
 
     .about-right {
+
+        &__title {
+            margin-bottom: 24px;
+        }
+
         &__content {
             grid-template-rows: repeat(2, max-content);
             grid-template-columns: repeat(5, 120px);
@@ -117,7 +122,7 @@
         padding-bottom: 0;
 
         &__header {
-            margin-bottom: 48px;
+            margin-bottom: 24px;
         }
     }
 
@@ -132,8 +137,8 @@
 @media (max-width: 660px) {
     .about {
         &__header {
-            margin-bottom: 32px;
-            
+            margin-bottom: 12px;
+
             &-icon {
                 margin-right: 8px;
             }
