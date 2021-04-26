@@ -204,7 +204,7 @@
         &__header {
             flex-direction: column;
             margin-bottom: 0;
-            padding-bottom: 23px;
+            padding-bottom: 48px;
             background-image: url(../images/pattern.svg);
 
             &-right {
@@ -299,15 +299,15 @@
             width: 100%;
         }
     }
+
+    .header-right {
+        margin-top: 24px;
+    }
 }
 
 @media (max-width: 768px) {
     .wrapper-inner__mobile {
         padding-bottom: 0;
-    }
-
-    .header-right {
-        margin-top: 48px;
     }
 }
 
