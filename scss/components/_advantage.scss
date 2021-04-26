@@ -1,12 +1,13 @@
 .advantage {
     background-color: $bg-color;
-    padding-bottom: 125px;
+    // padding-bottom: 125px;
 
     &__header {
         display: flex;
         margin-bottom: 50px;
 
         &-icon {
+            align-self: flex-start;
             margin-right: 17px;
         }
     }
@@ -37,6 +38,10 @@
 @media (max-width: 960px) {
 
     .advantage {
+        .header {
+            margin-bottom: 48px;
+        }
+
         &__row {
             display: grid;
             grid-template-rows: repeat(2, max-content);
@@ -56,13 +61,21 @@
 @media (max-width: 576px) {
     
     .advantage {
-        padding-bottom: 50px;
+        // padding-bottom: 50px;
+
+        &__header {
+            margin-bottom: 32px;
+
+            &-icon {
+                margin-right: 8px;
+            }
+        }
         
         &__row {
             display: grid;
             grid-template-rows: repeat(4, max-content);
             grid-template-columns: repeat(2, max-content);
-            grid-row-gap: 28px;
+            grid-row-gap: 24px;
             padding-left: 0;
             justify-content: space-around;
         }

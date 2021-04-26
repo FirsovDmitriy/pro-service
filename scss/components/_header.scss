@@ -4,7 +4,7 @@
   // min-height: 100vh;
   &__info {
     background-color: $bg-color;
-    padding-bottom: 20px;
+    // padding-bottom: 20px;
   }
 
   &__wrapper {
@@ -50,11 +50,20 @@
     justify-content: flex-start;
     margin-top: 44px;
   }
+
+  &-prev {
+    margin-right: 15px;
+  }
+
+  &-next {
+    margin-left: 15px;
+  }
 }
 
 .header-info {
   .wrapper-inner {
-    padding-top: $padding-vertical-sm;
+    padding-top: 23px;
+    padding-bottom: 20px;
   }
 
   &__wrapper {
@@ -145,6 +154,7 @@
 .header-bottom {
   .wrapper-inner {
     padding-top: 0;
+    padding-bottom: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -196,6 +206,14 @@
     &__arrow {
       margin-top: 50px;
     }
+
+    &-prev {
+      margin-right: 6px;
+    }
+
+    &-next {
+      margin-left: 6px;
+    }
   }
 
   .menu {
@@ -214,6 +232,17 @@
     }
   }
   .header-info {
+    padding-bottom: 0;
+
+    .wrapper-inner {
+      padding-top: 12px;
+      padding-bottom: 30px;
+    }
+
+    &__wrapper {
+      align-items: center;
+    }
+
     &__right {
       &-working-hours {
         display: none;
@@ -225,6 +254,7 @@
     flex-direction: column-reverse;
 
     .wrapper-inner {
+      // padding-top: 64px;
       position: static;
     }
 
@@ -243,12 +273,17 @@
     .wrapper-inner {
       padding-top: 13px;
     }
+
     &__wrapper {
       justify-content: center;
     }
 
     &__middle {
       background-color: $bg-color;
+
+      .wrapper-inner {
+        padding-top: 0;
+      }
     }
 
     &__btn {
@@ -257,15 +292,26 @@
     }
 
     &__carousel {
-      padding: 32px 0 32px 25px;
+      padding: 32px 0 32px 0;
     }
 
     &__arrow {
       margin-top: 24px;
     }
+
+    &-prev {
+      margin-right: 12px;
+    }
+
+    &-next {
+      margin-left: 12px;
+    }
   }
 
   .header-info {
+    .wrapper-inner {
+      padding-bottom: 20px;
+    }
     &__left {
       &-text {
         display: none;
@@ -401,10 +447,24 @@
   }
 
   .content {
+
+    &__title {
+      line-height: 28px;
+      margin-bottom: 24px;
+    }
    
     &__text {
       font-size: $font-size-md;
-      width: 271px;
+      line-height: 22px;
+      width: 232px;
+    }
+  }
+
+  .header-bottom {
+
+    .wrapper-inner {
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 }

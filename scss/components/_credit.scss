@@ -2,7 +2,7 @@
     position: relative;
     z-index: 10;
     background-color: $bg-color;
-    padding-bottom: 100px;
+    // padding-bottom: 100px;
 
     &__header {
         display: flex;
@@ -90,6 +90,10 @@
 
 @media (max-width: 1000px) {
     .credit {
+        &__header {
+            margin-bottom: 48px;
+        }
+
         &__row {
             flex-direction: column;
         }
@@ -106,10 +110,24 @@
             }
         }
     }
+    
+    .credit-info {
+        &__wrapper {
+            margin-bottom: 8px;
+        }
+    }
 }
 
 @media (max-width: 620px) {
     .credit {
+        &__header {
+            margin-bottom: 32px;
+            
+            &-icon {
+                margin-right: 8px;
+            }
+        }
+
         &__btn {
             &--desktop {
                 display: none;
@@ -156,7 +174,7 @@
 
 @media (max-width: 425px) {
     .credit {
-        padding-bottom: 50px;
+        // padding-bottom: 50px;
         
         &__row {
             padding: 0;

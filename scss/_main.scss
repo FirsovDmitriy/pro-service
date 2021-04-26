@@ -9,7 +9,7 @@ body {
 .title {
   font-weight: $fw-demi;
   font-size: 48px;
-  line-height: 24px;
+  line-height: 32px;
   color: $primary-color;
 
   @media (max-width: 768px) {
@@ -63,6 +63,17 @@ body {
   &:hover {
     color: $primary-text-color;
     background: $green-color;
+  }
+
+  &--transparent {
+    @media (min-width: 731px) and (max-width: 820px) {
+      border: none;
+      background-color: transparent;
+      padding-left: 0;
+      padding-right: 0;
+      color: $primary-color;
+      font-weight: $fw-medium;
+    }
   }
 }
 

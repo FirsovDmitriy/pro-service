@@ -1,7 +1,7 @@
 .calculator {
     position: relative;
     background: url(../../images/pattern.svg);
-    padding-bottom: 107px;
+    // padding-bottom: 107px;
 
     &__header {
         display: flex;
@@ -114,6 +114,16 @@
 }
 
 @media (max-width: 786px) {
+    .calculator {
+        &__header {
+            margin-bottom: 48px;
+        }
+
+        &__plant-img {
+            right: 0;
+        }
+    }
+
     .calculator-form {
         padding-left: 49px;
         &__group {
@@ -123,6 +133,8 @@
         }
 
         &__name {
+            margin-bottom: 12px;
+
             &--last {
                 margin-bottom: 5px;
             }
@@ -132,7 +144,19 @@
 
 @media (max-width: 610px) {
     .calculator {
-        padding-bottom: 50px;
+        // padding-bottom: 50px;
+
+        &__header {
+                margin-bottom: 32px;
+    
+            &-icon {
+                margin-right: 8px;
+            }
+        }
+
+        &__subtitle {
+            width: 144px;
+        }
 
         &__btn {
             margin-top: 32px;
@@ -140,7 +164,6 @@
 
         &__plant-img {
             width: 120px;
-            right: 10px;
         }
 
     }

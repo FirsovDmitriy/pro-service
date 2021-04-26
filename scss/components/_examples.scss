@@ -1,21 +1,26 @@
 .examples {
     position: relative;
     background-image: url(../images/pattern.svg);
-    padding-bottom: 100px;
+    // padding-bottom: 100px;
 
     &__header {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 65px;
+        margin-bottom: 75px;
 
         .wrapper-inner {
             display: flex;
             justify-content: space-between;
+            padding-bottom: 0;
         }
 
         &-left {
             display: flex;
         }
+    }
+
+    &__container {
+        padding-top: 0;
     }
 
     &__subtitle {
@@ -109,6 +114,7 @@
 
     &__btns {
         margin-top: 57px;
+        display: inline-flex;
     }
 
     &__btn {
@@ -126,11 +132,23 @@
         .arrow-group__next {
             display: flex;
             margin-left: 15px;
+            height: 20px;
+            align-items: center;
         }
 
         &:hover svg {
             fill: $primary-text-color;
         }
+    }
+
+    &__prev {
+        margin-right: 8px;
+    }
+
+    &__arrow-left {
+        display: flex;
+        height: 20px;
+        align-items: center;
     }
 
     &__wrap-mobile {
@@ -221,6 +239,7 @@
                 display: flex;
                 justify-content: space-between;
                 padding-top: 0;
+                padding-bottom: 0;
             }
         }
 
@@ -282,10 +301,20 @@
     }
 }
 
+@media (max-width: 768px) {
+    .wrapper-inner__mobile {
+        padding-bottom: 0;
+    }
+
+    .header-right {
+        margin-top: 48px;
+    }
+}
+
 @media (max-width: 567px) {
     .examples {
         background-image: url(../images/pattern.svg);
-        padding-bottom: 20px;
+        padding-bottom: 48px;
 
         &__header {
             background-image: none;
@@ -294,6 +323,7 @@
 
             &-right {
                 margin-left: 0;
+                margin-top: 32px;
             }
         }
 
@@ -306,7 +336,7 @@
 
         &__container {
             width: 100%;
-            padding: 0 10px;
+            padding: 0 25px;
         }
     }
 
@@ -324,6 +354,8 @@
 
             .wrapper-inner {
                 flex-direction: column;
+                padding-left: 0;
+                padding-right: 0;
             }
         }
 

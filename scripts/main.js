@@ -34,12 +34,13 @@ new Swiper('.header__carousel', {
     navigation: {
         prevEl: '.header-prev',
         nextEl: '.header-next'
-    }
+    },
+
+    spaceBetween: 30
 })
 
 
-
- new Swiper('.external-slider', {
+new Swiper('.external-slider', {
     navigation: {
         prevEl: '.external-slider__prev',
         nextEl: '.external-slider__next'

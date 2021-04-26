@@ -5,16 +5,17 @@
     grid-template-areas:
         "info info"
         "map img";
-    grid-row-gap: 50px;
+    // grid-row-gap: 50px;
     background-color: $bg-color;
 
     .wrapper-inner {
+        padding-bottom: 50px;
         grid-area: info;
     }
 
     &__header {
         display: flex;
-        margin-bottom: 32px;
+        margin-bottom: 48px;
 
         &-icon {
             align-self: flex-start;
@@ -37,9 +38,11 @@
         font-size: 24px;
         line-height: 15px;
         letter-spacing: 0.02em;
+        font-weight: $fw-medium;
 
         &--sm {
             font-size: $font-size-sm;
+            font-weight: $fw-book;
             line-height: 9px;
             color: $second-color;
             margin-bottom: 12px;
@@ -122,7 +125,6 @@
             padding-bottom: 8px;
             border-bottom: 2px solid;
             margin-top: 32px;
-            margin-bottom: 63px;
         }
     }
 }
@@ -139,7 +141,15 @@
 @media (max-width: 680px) {
     .contacts {
         // 
-        flex-direction: column; 
+        flex-direction: column;
+        
+        &__header {
+            margin-bottom: 32px;
+            
+            &-icon {
+                margin-right: 8px;
+            }
+        }
         
         &__row {
             // padding-bottom: 48px;
