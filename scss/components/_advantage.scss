@@ -61,13 +61,13 @@
 @media (max-width: 576px) {
     
     .advantage {
-        // padding-bottom: 50px;
-
         &__header {
             margin-bottom: 32px;
 
             &-icon {
                 margin-right: 8px;
+                width: 24px;
+                height: 24px;
             }
         }
         

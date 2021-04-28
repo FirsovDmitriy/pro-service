@@ -123,6 +123,8 @@
             
             &-icon {
                 margin-right: 8px;
+                width: 24px;
+                height: 24px;
             }
         }
 
@@ -156,8 +158,12 @@
     .carousel {
 
         &__avatar {
-            height: 64px;
+            max-height: 62px;
             margin-right: 12px;
+
+            &-image {
+                max-height: 100%;
+            }
         }
 
         &__name-person {
@@ -174,3 +180,16 @@
         max-width: 270px;
     }
 }
+
+
+// @media (max-width: 320px) {
+//     .carousel {
+//         &__avatar {
+//             height: 60px;
+
+//             &-image {
+//                 height: 60px;
+//             }
+//         }
+//     }
+// }

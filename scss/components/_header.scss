@@ -29,6 +29,7 @@
   &__img {
     width: 57%;
     height: 100%;
+    user-select: none;
   }
 
   &__carousel {
@@ -403,6 +404,7 @@
       transform: translateY(-200%);
       transition: $transition;
       z-index: 50;
+      overflow-y: auto;
 
       &--active {
         transform: translateY(0);

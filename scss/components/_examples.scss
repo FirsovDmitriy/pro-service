@@ -8,6 +8,11 @@
         justify-content: space-between;
         margin-bottom: 75px;
 
+        &-icon {
+            align-self: flex-start;
+            margin-right: 17px;
+        }
+
         .wrapper-inner {
             display: flex;
             justify-content: space-between;
@@ -321,6 +326,12 @@
             padding-bottom: 0;
             margin-bottom: 25px;
 
+            &-icon {
+                margin-right: 8px;
+                width: 24px;
+                height: 24px;
+            }
+
             &-right {
                 margin-left: 0;
                 margin-top: 32px;
@@ -365,6 +376,7 @@
             width: 106px;
             background: transparent;
             margin-top: 12px;
+            text-align: start;
         }
 
         &__arrows {

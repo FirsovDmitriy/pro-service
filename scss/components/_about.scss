@@ -44,6 +44,10 @@
         line-height: 24px;
         letter-spacing: 0.02em;
     }
+
+    &__img {
+        user-select: none;
+    }
 }
 
 .about-right {
@@ -141,6 +145,8 @@
 
             &-icon {
                 margin-right: 8px;
+                width: 24px;
+                height: 24px;
             }
         }
 
@@ -164,6 +170,15 @@
     }
 }
 
+@media (max-width: 376px) {
+    .about-left {
+        &__img {
+            top: 237px;
+            width: 100%;
+        }
+    }
+}
+
 @media (max-width: 360px) {
     .about-left {
         &__text {
@@ -174,6 +189,15 @@
             position: absolute;
             top: 260px;
             left: 0;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 330px) and (max-width: 359px) {
+    .about-left {
+        &__img {
+            top: 240px;
         }
     }
 }

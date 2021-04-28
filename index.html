@@ -6,16 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="images/favicons/favicon.png" type="image/png">
+
+
   <link rel="shortcut icon" href="images/favicons/favicon.svg" type="image/svg">
+
+
   <title>ProService</title>
   
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> 
+  
+  <!-- <link rel="stylesheet" href="css/styles.min.css"> -->
+
+  <link rel="preload" as="style" href="css/styles.min.css" onload="this.rel='stylesheet'">
+  
 </head>
 
 <body>
 
-    <div class="wrapper-outer header">
+    <header class="wrapper-outer header">
       <div class="header__info header-info">
         <div class="wrapper-inner wrapper-inner--lg">
           <div class="header-info__wrapper">
@@ -31,7 +39,7 @@
             </div>
             <div class="header-info__right">
               <p class="header-info__right-working-hours">
-                работаем по будням пн-пт: 9:00 −18:00
+                работаем по будням пн-пт: 9:00 − 18:00
               </p>
               <div class="header-info__right-contacts">
                 <a href="+78452565825" class="header-info__right-number phone-number">+7 (8452) 56-58-25</a>
@@ -76,7 +84,12 @@
         </div>
       </div>
       <div class="header__bottom header-bottom">
-        <img src="images/header/header-img.jpg" alt="" class="header__img">
+        <!-- <img src="images/header/header-img.jpg" srcset='images/header/header-img-2x.jpg 2x' alt="" class="header__img" loading='lazy'> -->
+
+        <img src="images/header/header-img.jpg" alt="" class="header__img" loading="lazy" srcset="
+                                                        images/header/header-img-2x.jpg 2x,
+                                                        images/header/header-img-3x.jpg 3x">
+
         <div class="wrapper-inner">
           <div class="header-bottom__wrapper">
 
@@ -134,7 +147,7 @@
         </div>
         <!-- /.wrapper-inner -->
       </div>
-    </div>
+    </header>
     <!-- /.wrapper-outer header -->
     
     <main class="main">
@@ -149,16 +162,16 @@
               </p>
             </div>
           </div>
-          <form action="" class="calculator__form calculator-form">
+          <form action="#" class="calculator__form calculator-form">
             <div class="calculator-form__group">
-              <label for="area" class="calculator-form__name">Площадь недвижимости</label>
+              <label for="fieldSquare" class="calculator-form__name">Площадь недвижимости</label>
               <div class="calculator-form__group-wrapper">
                 <input type="text" class="calculator-form__input calculator-form__input--sm" id="fieldSquare">
                 <span class="calculator-form__meter">м <sup>2</sup> </span>
               </div>
             </div>
             <div class="calculator-form__group">
-              <label for="area" class="calculator-form__name">Количество комнат</label>
+              <label class="calculator-form__name">Количество комнат</label>
               <div class="calculator-form__buttons">
                 <div class="calculator-form__inputs-wrap">
                   <input type="radio" id="radio_1" name="apartment" class="calculator-form__input">
@@ -187,7 +200,7 @@
               </div>
             </div>
             <div class="calculator-form__group">
-              <label for="area" class="calculator-form__name calculator-form__name--last">Адрес дома, дачи или коттеджа</label>
+              <label for="fieldAddress" class="calculator-form__name calculator-form__name--last">Адрес дома, дачи или коттеджа</label>
               <input type="text" class="calculator-form__input calculator-form__input--lg" id="fieldAddress">
             </div>
             <button class="calculator__btn btn">Рассчитать стоимость ремонта</button>
@@ -283,7 +296,7 @@
               <div class="wrapper-inner wrapper-inner__examples">
 
                 <div class="examples__header-left">
-                  <img src="images/examples/map.svg" alt="" class="credit__header-icon">
+                  <img src="images/examples/map.svg" alt="" class="examples__header-icon">
                   <div class="examples__header-wrapper">
                     <h2 class="examples__title title">Примеры работ</h2>
                     <p class="examples__subtitle subtitle-lg">100 квартир и домов сделано нами. 10 сейчас в ремонте</p>
@@ -710,22 +723,33 @@
                 <!-- /.swiper-wrapper -->
   
                 <div class="external-slider__btns">
+                  
                   <button class="external-slider__btn external-slider__btn--sm btn external-slider__prev">
-                    <div class="arrow-group__prev external-slider__arrow-left">
+
+                    <span class="arrow-group__prev external-slider__arrow-left">
+
                       <svg class="arrow-group__svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M0.292893 8.70705C-0.0976311 8.31653 -0.0976311 7.68336 0.292893 7.29284L6.65685 0.92888C7.04738 0.538355 7.68054 0.538355 8.07107 0.92888C8.46159 1.3194 8.46159 1.95257 8.07107 2.34309L3.41421 6.99995H21C21.5523 6.99995 22 7.44766 22 7.99995C22 8.55223 21.5523 8.99995 21 8.99995H3.41421L8.07107 13.6568C8.46159 14.0473 8.46159 14.6805 8.07107 15.071C7.68054 15.4615 7.04738 15.4615 6.65685 15.071L0.292893 8.70705Z" />
                       </svg>
-                    </div>
+                      
+                    </span>
+
                   </button>
+
                   <button class="external-slider__btn btn external-slider__next">
-                    <div>Следующий пример</div>
-                    <div class="arrow-group__next external-slider__arrow">
+
+                    <span>Следующий пример</span>
+
+                    <span class="arrow-group__next external-slider__arrow">
+
                       <svg class="arrow-group__svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M21.7069 7.29295C22.0974 7.68347 22.0974 8.31664 21.7069 8.70716L15.3429 15.0711C14.9524 15.4616 14.3192 15.4616 13.9287 15.0711C13.5382 14.6806 13.5382 14.0474 13.9287 13.6569L18.5855 9.00005L0.999755 9.00005C0.447471 9.00005 -0.000244736 8.55234 -0.000244784 8.00005C-0.000244833 7.44777 0.447471 7.00005 0.999755 7.00005L18.5855 7.00005L13.9287 2.3432C13.5382 1.95268 13.5382 1.31951 13.9287 0.928985C14.3192 0.53846 14.9524 0.53846 15.3429 0.928985L21.7069 7.29295Z" />
                       </svg>
-                    </div>
+
+                    </span>
+
                   </button>
                 </div>
   
@@ -812,8 +836,9 @@
               </p>
               <div class="about-left__img">
                 <picture>
-                  <source media="(max-width: 767px)" srcset="images/about/about-mobile.jpg">
-                  <source media="(min-width: 768px)" srcset="images/about/about-img.jpg">
+                  <source media="(max-width: 680px)" srcset="images/about/about-img-320.jpg">
+                  <source media="(max-width: 1099px)" srcset="images/about/about-img-768.jpg">
+                  <source media="(min-width: 1100px)" srcset="images/about/about-img.jpg">
                   <img src="images/about/about-img.jpg" alt="" class="about-left__img">
                 </picture>
               </div>
@@ -1062,7 +1087,7 @@
               <p class="contacts__text">mail@mail.ru</p>
             </div>
             <div class="contacts__col">
-              <p class="contacts__text contacts__text--sm">Приходите к ним в гости</p>
+              <p class="contacts__text contacts__text--sm">Приходите к нам в гости</p>
               <p class="contacts__text">г. Саратов, ул, Московская, 55</p>
             </div>
 
@@ -1076,16 +1101,22 @@
 
         <div class="contacts__map">
           <iframe
+            class="contacts__map-wrap"
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A551e6c2b2313cc838bdf63114dfbac7b07801749d9766e885174a54bdee92546&amp;source=constructor"
-            width="100%" height="100%" frameborder="0"></iframe>
+          >
+          </iframe>
         </div>
 
         <div class="contacts__block-img">
           <!-- <img src="images/contacts/contacts-img.jpg" alt="" class="contacts__img"> -->
           <picture>
-            <source media="(max-width: 680px)" srcset="images/contacts/contacts-320.jpg">
-            <source media="(max-width: 1029px)" srcset="images/contacts/contacts-768.jpg">
-            <source media="(min-width: 1030px)" srcset="images/contacts/contacts-img.jpg">
+            <source media="(max-width: 680px)" srcset="images/contacts/contacts-img-320-1x.jpg,
+                images/contacts/contacts-img-320-2x.jpg 2x,
+                images/contacts/contacts-img-320-3x.jpg 3x">
+            <source media="(max-width: 1029px)" srcset="images/contacts/contacts-img-768.jpg">
+            <source media="(min-width: 1030px)" srcset="images/contacts/contacts-img.jpg,
+                images/contacts/contacts-img-2x.jpg 2x,
+                images/contacts/contacts-img-3x.jpg 3x">
             <img src="images/contacts/contacts-img.jpg" alt="" class="contacts__img">
           </picture>
         </div>
